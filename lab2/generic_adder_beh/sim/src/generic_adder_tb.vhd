@@ -26,7 +26,7 @@ component generic_adder_beh is
 end component generic_adder_beh;
 
 constant NUM_BITS          : integer := 4;
-constant SEQUENTIAL_FLAG   : boolean := true;     -- false : concurrent stimuli, true: sequential stimuli
+constant SEQUENTIAL_FLAG   : boolean := false;     -- false : concurrent stimuli, true: sequential stimuli
 signal a                   : std_logic_vector(NUM_BITS - 1 downto 0) := (others => '0');
 signal b                   : std_logic_vector(NUM_BITS - 1 downto 0) := (others => '0');
 signal cin                 : std_logic := '1';
