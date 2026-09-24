@@ -1,2 +1,2 @@
-quartus_pgm --mode=JTAG -o P;output_files\blink.sof@2
+quartus_pgm --mode=JTAG -o P;output_files\counter.sof@2
 pause
