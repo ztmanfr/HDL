@@ -1,0 +1,67 @@
+# do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:56:07 on Oct 01,2026
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 15:56:07 on Oct 01,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:56:07 on Oct 01,2026
+# vcom -reportprogress 300 -93 -work work ../../src/generic_adder_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_adder_beh
+# -- Compiling architecture beh of generic_adder_beh
+# End time: 15:56:07 on Oct 01,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:56:07 on Oct 01,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 15:56:07 on Oct 01,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:56:07 on Oct 01,2026
+# vcom -reportprogress 300 -93 -work work ../../src/top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity top
+# -- Compiling architecture struct of top
+# End time: 15:56:07 on Oct 01,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:56:07 on Oct 01,2026
+# vcom -reportprogress 300 -93 -work work ../src/top_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity top_tb
+# -- Compiling architecture arch of top_tb
+# ** Warning: ../src/top_tb.vhd(18): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 15:56:07 on Oct 01,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" top_tb 
+# Start time: 15:56:07 on Oct 01,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_tb(arch)
+# Loading work.top(struct)
+# Loading work.generic_counter(beh)
+# Loading ieee.numeric_std(body)
+# Loading work.generic_adder_beh(beh)
+# Loading work.seven_seg(beh)
+# End time: 16:06:49 on Oct 01,2026, Elapsed time: 0:10:42
+# Errors: 0, Warnings: 0
