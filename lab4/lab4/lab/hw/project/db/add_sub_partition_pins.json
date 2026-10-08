@@ -1,0 +1,133 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "a_bcd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "a_bcd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a_bcd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "a_bcd[3]",
+					"strict" : false
+				},
+				{
+					"name" : "a_bcd[4]",
+					"strict" : false
+				},
+				{
+					"name" : "a_bcd[5]",
+					"strict" : false
+				},
+				{
+					"name" : "a_bcd[6]",
+					"strict" : false
+				},
+				{
+					"name" : "b_bcd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b_bcd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b_bcd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b_bcd[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b_bcd[4]",
+					"strict" : false
+				},
+				{
+					"name" : "b_bcd[5]",
+					"strict" : false
+				},
+				{
+					"name" : "b_bcd[6]",
+					"strict" : false
+				},
+				{
+					"name" : "result_bcd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "result_bcd[1]",
+					"strict" : false
+				},
+				{
+					"name" : "result_bcd[2]",
+					"strict" : false
+				},
+				{
+					"name" : "result_bcd[3]",
+					"strict" : false
+				},
+				{
+					"name" : "result_bcd[4]",
+					"strict" : false
+				},
+				{
+					"name" : "result_bcd[5]",
+					"strict" : false
+				},
+				{
+					"name" : "result_bcd[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sub_btn",
+					"strict" : false
+				},
+				{
+					"name" : "add_btn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
