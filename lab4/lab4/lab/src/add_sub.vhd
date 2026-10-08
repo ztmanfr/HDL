@@ -55,15 +55,16 @@ architecture struct of add_sub is
     );
   end component;
 
-  signal a_sync      : std_logic_vector(2 downto 0);
-  signal b_sync      : std_logic_vector(2 downto 0);
-  signal add_pulse   : std_logic;
-  signal sub_pulse   : std_logic;
-  signal ensel      : std_logic;
-  signal fin_result  : std_logic_vector(3 downto 0);
-  signal result_reg  : std_logic_vector(3 downto 0) := "0000";
-  signal a_disp      : std_logic_vector(3 downto 0);
-  signal b_disp      : std_logic_vector(3 downto 0);
+  signal a_sync    : std_logic_vector(2 downto 0);
+  signal b_sync    : std_logic_vector(2 downto 0);
+  signal add_en    : std_logic;
+  signal sub_en    : std_logic;
+  signal res_sig   : std_logic_vector(3 downto 0);
+  signal res       : std_logic_vector(3 downto 0) := "0000";
+  signal a_disp    : std_logic_vector(3 downto 0);
+  signal b_disp    : std_logic_vector(3 downto 0);
+  signal add_btn_n : std_logic;
+  signal sub_btn_n : std_logic;
 
 begin
 
@@ -73,25 +74,26 @@ begin
   u_sync_b : synchronizer_3bit
     port map (clk => clk, reset => reset, async_in => b, sync_out => b_sync);
 
+  add_btn_n <= not add_btn;
+  sub_btn_n <= not sub_btn;
+
   u_sync_add : rising_edge_synchronizer
-    port map (clk => clk, reset => reset, async_in => add_btn, pulse_out => add_pulse);
+    port map (clk => clk, reset => reset, async_in => add_btn_n, pulse_out => add_en);
 
   u_sync_sub : rising_edge_synchronizer
-    port map (clk => clk, reset => reset, async_in => sub_btn, pulse_out => sub_pulse);
-
-  ensel <= sub_pulse;
+    port map (clk => clk, reset => reset, async_in => sub_btn_n, pulse_out => sub_en);
 
   u_add_sub : generic_add_sub
     generic map (bits => 3)
-    port map (a => a_sync, b => b_sync, sel => ensel, result => fin_result);
+    port map (a => a_sync, b => b_sync, sel => sub_en, result => res_sig);
 
   result_register : process (clk, reset)
   begin
     if (reset = '1') then
-      result_reg <= "0000";
+      res <= "0000";
     elsif (clk'event and clk = '1') then
-      if (add_pulse = '1' or sub_pulse = '1') then
-        result_reg <= fin_result;
+      if (add_en = '1' or sub_en = '1') then
+        res <= res_sig;
       end if;
     end if;
   end process;
@@ -106,6 +108,6 @@ begin
     port map (clk => clk, reset => reset, bcd => b_disp, seven_seg_out => b_bcd);
 
   u_seg_result : seven_seg
-    port map (clk => clk, reset => reset, bcd => result_reg, seven_seg_out => result_bcd);
+    port map (clk => clk, reset => reset, bcd => res, seven_seg_out => result_bcd);
 
 end architecture struct;

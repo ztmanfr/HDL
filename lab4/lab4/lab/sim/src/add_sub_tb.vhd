@@ -27,8 +27,8 @@ architecture arch of add_sub_tb is
   signal reset      : std_logic := '1';
   signal a          : std_logic_vector(2 downto 0) := "000";
   signal b          : std_logic_vector(2 downto 0) := "000";
-  signal add_btn    : std_logic := '0';
-  signal sub_btn    : std_logic := '0';
+  signal add_btn    : std_logic := '1';
+  signal sub_btn    : std_logic := '1';
   signal a_bcd      : std_logic_vector(6 downto 0);
   signal b_bcd      : std_logic_vector(6 downto 0);
   signal result_bcd : std_logic_vector(6 downto 0);
@@ -59,14 +59,16 @@ begin
         b <= std_logic_vector(to_unsigned(j, 3));
         wait for 2 * period;
 
-        add_btn <= '1';
-        wait for period;
         add_btn <= '0';
+        sub_btn <= '1';
+        wait for 3 * period;
+        add_btn <= '1';
         wait for 2 * period;
 
-        sub_btn <= '1';
-        wait for period;
         sub_btn <= '0';
+        add_btn <= '1';
+        wait for 3 * period;
+        sub_btn <= '1';
         wait for 2 * period;
       end loop;
     end loop;

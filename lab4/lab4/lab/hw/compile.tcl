@@ -10,7 +10,7 @@ file mkdir project
 cd project
 load_package flow
 project_new $project_name
-set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6 
 set_global_assignment -name TOP_LEVEL_ENTITY add_sub
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY ../output_files

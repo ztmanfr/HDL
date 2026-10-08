@@ -32,4 +32,4 @@ double_flop :process(reset,clk,async_in)
 end process;
 
 sync_out <= flop2;
-end beh; 
+end beh;
