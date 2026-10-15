@@ -4,6 +4,10 @@ add wave -noupdate -radix decimal /double_dabble_tb/uut/result_padded
 add wave -noupdate -radix decimal /double_dabble_tb/uut/ones
 add wave -noupdate -radix decimal /double_dabble_tb/uut/tens
 add wave -noupdate -radix decimal /double_dabble_tb/uut/hundreds
+add wave -noupdate -radix decimal /double_dabble_tb/uut/clk
+add wave -noupdate -radix decimal /double_dabble_tb/uut/reset
+add wave -noupdate -radix decimal /double_dabble_tb/uut/btn
+
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {417112 ps} 0}
 quietly wave cursor active 1
