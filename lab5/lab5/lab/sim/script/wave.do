@@ -14,7 +14,6 @@ radix define States {
     -default default
 }
 quietly WaveActivateNextPane {} 0
-<<<<<<< HEAD
 add wave -noupdate /double_dabble_tb/reset
 add wave -noupdate /double_dabble_tb/switch
 add wave -noupdate /double_dabble_tb/btn
@@ -30,16 +29,6 @@ add wave -noupdate -radix unsigned /double_dabble_tb/uut/one
 add wave -noupdate -radix States /double_dabble_tb/bcd_2
 add wave -noupdate -radix States /double_dabble_tb/bcd_1
 add wave -noupdate -radix States /double_dabble_tb/bcd_0
-=======
-add wave -noupdate -radix decimal /double_dabble_tb/uut/result_padded
-add wave -noupdate -radix decimal /double_dabble_tb/uut/ones
-add wave -noupdate -radix decimal /double_dabble_tb/uut/tens
-add wave -noupdate -radix decimal /double_dabble_tb/uut/hundreds
-add wave -noupdate -radix decimal /double_dabble_tb/uut/clk
-add wave -noupdate -radix decimal /double_dabble_tb/uut/reset
-add wave -noupdate -radix decimal /double_dabble_tb/uut/btn
-
->>>>>>> 1ab6a95aa02ffd46c90bee7d9df2f67c267cd031
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {50000 ps} 0}
 quietly wave cursor active 1
