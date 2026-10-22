@@ -10,7 +10,7 @@ file mkdir project
 cd project
 load_package flow
 project_new $project_name
-set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6 
 set_global_assignment -name TOP_LEVEL_ENTITY add_sub_state_machine
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY ../output_files
@@ -20,6 +20,7 @@ set_global_assignment -name VHDL_FILE ../../src/rising_edge_synchronizer.vhd
 set_global_assignment -name VHDL_FILE ../../src/seven_seg.vhd
 set_global_assignment -name VHDL_FILE ../../src/generic_add_sub.vhd
 set_global_assignment -name VHDL_FILE ../../src/synchronizer_8bit.vhd
+set_global_assignment -name VHDL_FILE ../../src/double_dabble.vhd
 set_global_assignment -name VHDL_FILE ../../src/add_sub_state_machine.vhd
 
 set_location_assignment PIN_AB12 -to reset
@@ -63,30 +64,6 @@ set_location_assignment PIN_AC28 -to bcd_2[3]
 set_location_assignment PIN_AD30 -to bcd_2[4]
 set_location_assignment PIN_AC29 -to bcd_2[5]
 set_location_assignment PIN_AC30 -to bcd_2[6]
-
-# set_location_assignment PIN_AD26 -to bcd_3[0]
-# set_location_assignment PIN_AC27 -to bcd_3[1]
-# set_location_assignment PIN_AD25 -to bcd_3[2]
-# set_location_assignment PIN_AC25 -to bcd_3[3]
-# set_location_assignment PIN_AB28 -to bcd_3[4]
-# set_location_assignment PIN_AB25 -to bcd_3[5]
-# set_location_assignment PIN_AB22 -to bcd_3[6]
-
-# set_location_assignment PIN_AA24 -to bcd_4[0]
-# set_location_assignment PIN_Y23  -to bcd_4[1]
-# set_location_assignment PIN_Y24  -to bcd_4[2]
-# set_location_assignment PIN_W22  -to bcd_4[3]
-# set_location_assignment PIN_W24  -to bcd_4[4]
-# set_location_assignment PIN_V23  -to bcd_4[5]
-# set_location_assignment PIN_W25  -to bcd_4[6]
-
-# set_location_assignment PIN_V25  -to bcd_5[0]
-# set_location_assignment PIN_AA28 -to bcd_5[1]
-# set_location_assignment PIN_Y27  -to bcd_5[2]
-# set_location_assignment PIN_AB27 -to bcd_5[3]
-# set_location_assignment PIN_AB26 -to bcd_5[4]
-# set_location_assignment PIN_AA26 -to bcd_5[5]
-# set_location_assignment PIN_AA25 -to bcd_5[6]
 
 set_location_assignment PIN_AA14 -to btn
 
