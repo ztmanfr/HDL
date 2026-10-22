@@ -1,5 +1,5 @@
 Analysis & Synthesis report for add_sub_state_machine
-Thu Oct 15 16:38:18 2026
+Thu Oct 22 13:33:26 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -10,7 +10,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: generic_add_sub:u_add_sub
+ 12. Port Connectivity Checks: "double_dabble:u_dd"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -33,22 +43,27 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Oct 15 16:38:18 2026               ;
-; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
-; Revision Name               ; add_sub_state_machine                           ;
-; Top-level Entity Name       ; add_sub_state_machine                           ;
-; Family                      ; Cyclone V                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
-; Total registers             ; N/A until Partition Merge                       ;
-; Total pins                  ; N/A until Partition Merge                       ;
-; Total virtual pins          ; N/A until Partition Merge                       ;
-; Total block memory bits     ; N/A until Partition Merge                       ;
-; Total PLLs                  ; N/A until Partition Merge                       ;
-; Total DLLs                  ; N/A until Partition Merge                       ;
-+-----------------------------+-------------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Oct 22 13:33:26 2026           ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                   ; add_sub_state_machine                           ;
+; Top-level Entity Name           ; add_sub_state_machine                           ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 60                                              ;
+; Total pins                      ; 36                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------+
@@ -147,11 +162,179 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-10        ;   0.0%      ;
 +----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path       ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+; ../../src/rising_edge_synchronizer.vhd ; yes             ; User VHDL File  ; C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/rising_edge_synchronizer.vhd ;         ;
+; ../../src/seven_seg.vhd                ; yes             ; User VHDL File  ; C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/seven_seg.vhd                ;         ;
+; ../../src/generic_add_sub.vhd          ; yes             ; User VHDL File  ; C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/generic_add_sub.vhd          ;         ;
+; ../../src/synchronizer_8bit.vhd        ; yes             ; User VHDL File  ; C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/synchronizer_8bit.vhd        ;         ;
+; ../../src/double_dabble.vhd            ; yes             ; User VHDL File  ; C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/double_dabble.vhd            ;         ;
+; ../../src/add_sub_state_machine.vhd    ; yes             ; User VHDL File  ; C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/add_sub_state_machine.vhd    ;         ;
++----------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 43        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 62        ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 19        ;
+;     -- 5 input functions                    ; 10        ;
+;     -- 4 input functions                    ; 12        ;
+;     -- <=3 input functions                  ; 21        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 60        ;
+;                                             ;           ;
+; I/O pins                                    ; 36        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 60        ;
+; Total fan-out                               ; 537       ;
+; Average fan-out                             ; 2.77      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+--------------------------+--------------+
+; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name              ; Library Name ;
++--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+--------------------------+--------------+
+; |add_sub_state_machine               ; 62 (15)             ; 60 (20)                   ; 0                 ; 0          ; 36   ; 0            ; |add_sub_state_machine                                 ; add_sub_state_machine    ; work         ;
+;    |double_dabble:u_dd|              ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_state_machine|double_dabble:u_dd              ; double_dabble            ; work         ;
+;    |generic_add_sub:u_add_sub|       ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_state_machine|generic_add_sub:u_add_sub       ; generic_add_sub          ; work         ;
+;    |rising_edge_synchronizer:u_edge| ; 2 (2)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_state_machine|rising_edge_synchronizer:u_edge ; rising_edge_synchronizer ; work         ;
+;    |seven_seg:u_seg_hun|             ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_state_machine|seven_seg:u_seg_hun             ; seven_seg                ; work         ;
+;    |seven_seg:u_seg_one|             ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_state_machine|seven_seg:u_seg_one             ; seven_seg                ; work         ;
+;    |seven_seg:u_seg_ten|             ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_state_machine|seven_seg:u_seg_ten             ; seven_seg                ; work         ;
+;    |synchronizer_8bit:u_sync8|       ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |add_sub_state_machine|synchronizer_8bit:u_sync8       ; synchronizer_8bit        ; work         ;
++--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+--------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 60    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 60    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; state_reg[0]                            ; 8       ;
+; seven_seg:u_seg_one|seven_seg_out[0]    ; 1       ;
+; seven_seg:u_seg_one|seven_seg_out[1]    ; 1       ;
+; seven_seg:u_seg_one|seven_seg_out[2]    ; 1       ;
+; seven_seg:u_seg_one|seven_seg_out[3]    ; 1       ;
+; seven_seg:u_seg_one|seven_seg_out[4]    ; 1       ;
+; seven_seg:u_seg_one|seven_seg_out[5]    ; 1       ;
+; seven_seg:u_seg_one|seven_seg_out[6]    ; 1       ;
+; seven_seg:u_seg_ten|seven_seg_out[0]    ; 1       ;
+; seven_seg:u_seg_ten|seven_seg_out[1]    ; 1       ;
+; seven_seg:u_seg_ten|seven_seg_out[2]    ; 1       ;
+; seven_seg:u_seg_ten|seven_seg_out[3]    ; 1       ;
+; seven_seg:u_seg_ten|seven_seg_out[4]    ; 1       ;
+; seven_seg:u_seg_ten|seven_seg_out[5]    ; 1       ;
+; seven_seg:u_seg_ten|seven_seg_out[6]    ; 1       ;
+; seven_seg:u_seg_hun|seven_seg_out[0]    ; 1       ;
+; seven_seg:u_seg_hun|seven_seg_out[1]    ; 1       ;
+; seven_seg:u_seg_hun|seven_seg_out[2]    ; 1       ;
+; seven_seg:u_seg_hun|seven_seg_out[3]    ; 1       ;
+; seven_seg:u_seg_hun|seven_seg_out[4]    ; 1       ;
+; seven_seg:u_seg_hun|seven_seg_out[5]    ; 1       ;
+; seven_seg:u_seg_hun|seven_seg_out[6]    ; 1       ;
+; Total number of inverted registers = 22 ;         ;
++-----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 16:1               ; 8 bits    ; 80 LEs        ; 8 LEs                ; 72 LEs                 ; No         ; |add_sub_state_machine|Mux27 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: generic_add_sub:u_add_sub ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; bits           ; 8     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "double_dabble:u_dd"         ;
++----------------------+-------+----------+--------------+
+; Port                 ; Type  ; Severity ; Details      ;
++----------------------+-------+----------+--------------+
+; result_padded[11..9] ; Input ; Info     ; Stuck at GND ;
++----------------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 60                          ;
+;     CLR               ; 40                          ;
+;     ENA CLR           ; 20                          ;
+; arriav_lcell_comb     ; 84                          ;
+;     arith             ; 10                          ;
+;         1 data inputs ; 2                           ;
+;         3 data inputs ; 8                           ;
+;     normal            ; 74                          ;
+;         1 data inputs ; 23                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 12                          ;
+;         5 data inputs ; 10                          ;
+;         6 data inputs ; 19                          ;
+; boundary_port         ; 36                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.80                        ;
+; Average LUT depth     ; 3.21                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -160,7 +343,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Thu Oct 15 16:38:10 2026
+    Info: Processing started: Thu Oct 22 13:33:15 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off add_sub_state_machine -c add_sub_state_machine
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -170,23 +353,35 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab5/lab5/lab/src/seven_seg.vhd
     Info (12022): Found design unit 1: seven_seg-beh File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/seven_seg.vhd Line: 13
     Info (12023): Found entity 1: seven_seg File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/seven_seg.vhd Line: 4
-Warning (12019): Can't analyze file -- file ../../src/generic_add_sub.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab5/lab5/lab/src/generic_add_sub.vhd
+    Info (12022): Found design unit 1: generic_add_sub-beh File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/generic_add_sub.vhd Line: 17
+    Info (12023): Found entity 1: generic_add_sub File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/generic_add_sub.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab5/lab5/lab/src/synchronizer_8bit.vhd
     Info (12022): Found design unit 1: synchronizer_8bit-beh File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/synchronizer_8bit.vhd Line: 13
     Info (12023): Found entity 1: synchronizer_8bit File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/synchronizer_8bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab5/lab5/lab/src/double_dabble.vhd
+    Info (12022): Found design unit 1: double_dabble-beh File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/double_dabble.vhd Line: 19
+    Info (12023): Found entity 1: double_dabble File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/double_dabble.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab5/lab5/lab/src/add_sub_state_machine.vhd
     Info (12022): Found design unit 1: add_sub_state_machine-struct File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/add_sub_state_machine.vhd Line: 18
     Info (12023): Found entity 1: add_sub_state_machine File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/add_sub_state_machine.vhd Line: 5
 Info (12127): Elaborating entity "add_sub_state_machine" for the top level hierarchy
 Info (12128): Elaborating entity "synchronizer_8bit" for hierarchy "synchronizer_8bit:u_sync8" File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/add_sub_state_machine.vhd Line: 88
 Info (12128): Elaborating entity "rising_edge_synchronizer" for hierarchy "rising_edge_synchronizer:u_edge" File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/add_sub_state_machine.vhd Line: 91
+Info (12128): Elaborating entity "generic_add_sub" for hierarchy "generic_add_sub:u_add_sub" File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/add_sub_state_machine.vhd Line: 122
+Info (12128): Elaborating entity "double_dabble" for hierarchy "double_dabble:u_dd" File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/add_sub_state_machine.vhd Line: 138
 Info (12128): Elaborating entity "seven_seg" for hierarchy "seven_seg:u_seg_hun" File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/add_sub_state_machine.vhd Line: 141
-Error (12006): Node instance "u_add_sub" instantiates undefined entity "generic_add_sub". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/add_sub_state_machine.vhd Line: 122
-Error (12006): Node instance "u_dd" instantiates undefined entity "double_dabble". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/ztm1359/Documents/HDL/lab5/lab5/lab/src/add_sub_state_machine.vhd Line: 138
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
-    Error: Peak virtual memory: 4850 megabytes
-    Error: Processing ended: Thu Oct 15 16:38:18 2026
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:16
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 132 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 25 output pins
+    Info (21061): Implemented 96 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4915 megabytes
+    Info: Processing ended: Thu Oct 22 13:33:26 2026
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:18
 
 

@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bcd_2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "btn",
+					"strict" : false
+				},
+				{
+					"name" : "switch[0]",
+					"strict" : false
+				},
+				{
+					"name" : "switch[6]",
+					"strict" : false
+				},
+				{
+					"name" : "switch[7]",
+					"strict" : false
+				},
+				{
+					"name" : "switch[5]",
+					"strict" : false
+				},
+				{
+					"name" : "switch[4]",
+					"strict" : false
+				},
+				{
+					"name" : "switch[3]",
+					"strict" : false
+				},
+				{
+					"name" : "switch[2]",
+					"strict" : false
+				},
+				{
+					"name" : "switch[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
