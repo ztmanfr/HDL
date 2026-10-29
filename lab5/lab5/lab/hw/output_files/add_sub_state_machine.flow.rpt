@@ -1,5 +1,5 @@
 Flow report for add_sub_state_machine
-Thu Oct 15 16:38:18 2026
+Thu Oct 22 13:34:11 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -37,24 +37,29 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+-----------------------------+-------------------------------------------------+
-; Flow Status                 ; Flow Failed - Thu Oct 15 16:38:18 2026          ;
-; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
-; Revision Name               ; add_sub_state_machine                           ;
-; Top-level Entity Name       ; add_sub_state_machine                           ;
-; Family                      ; Cyclone V                                       ;
-; Device                      ; 5CSEMA5F31C6                                    ;
-; Timing Models               ; Final                                           ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
-; Total registers             ; N/A until Partition Merge                       ;
-; Total pins                  ; N/A until Partition Merge                       ;
-; Total virtual pins          ; N/A until Partition Merge                       ;
-; Total block memory bits     ; N/A until Partition Merge                       ;
-; Total PLLs                  ; N/A until Partition Merge                       ;
-; Total DLLs                  ; N/A until Partition Merge                       ;
-+-----------------------------+-------------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Thu Oct 22 13:34:05 2026           ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                   ; add_sub_state_machine                           ;
+; Top-level Entity Name           ; add_sub_state_machine                           ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CSEMA5F31C6                                    ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 41 / 32,070 ( < 1 % )                           ;
+; Total registers                 ; 61                                              ;
+; Total pins                      ; 36 / 457 ( 8 % )                                ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                           ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                                   ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
 
 
 +-------------------------------------------+
@@ -62,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+-----------------------+
 ; Option            ; Setting               ;
 +-------------------+-----------------------+
-; Start date & time ; 10/15/2026 16:38:11   ;
+; Start date & time ; 10/22/2026 13:33:16   ;
 ; Main task         ; Compilation           ;
 ; Revision Name     ; add_sub_state_machine ;
 +-------------------+-----------------------+
@@ -73,7 +78,7 @@ refer to the applicable agreement for further details.
 +--------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name          ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +--------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID    ; 194042950431042.179209669017412 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID    ; 194042950431036.179269039617288 ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY ; ../output_files                 ; --            ; --          ; --         ;
 +--------------------------+---------------------------------+---------------+-------------+------------+
 
@@ -83,8 +88,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4850 MB             ; 00:00:16                           ;
-; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4915 MB             ; 00:00:18                           ;
+; Fitter               ; 00:00:31     ; 1.0                     ; 7187 MB             ; 00:01:47                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4835 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.1                     ; 5217 MB             ; 00:00:05                           ;
+; Total                ; 00:00:52     ; --                      ; --                  ; 00:02:16                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -93,7 +101,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; gol-1360-10      ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; gol-1360-09      ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; gol-1360-09      ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; gol-1360-09      ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; gol-1360-09      ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -101,6 +112,9 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off add_sub_state_machine -c add_sub_state_machine
+quartus_fit --read_settings_files=off --write_settings_files=off add_sub_state_machine -c add_sub_state_machine
+quartus_asm --read_settings_files=off --write_settings_files=off add_sub_state_machine -c add_sub_state_machine
+quartus_sta add_sub_state_machine -c add_sub_state_machine
 
 
 
