@@ -25,6 +25,7 @@ set_global_assignment -name VHDL_FILE ../../src/lab6/alu.vhd
 set_global_assignment -name VHDL_FILE ../../src/lab6/double_dabble.vhd
 set_global_assignment -name VHDL_FILE ../../src/lab6/seven_seg.vhd
 set_global_assignment -name VHDL_FILE ../../src/lab6/calculator.vhd
+set_global_assignment -name VHDL_FILE ../../src/processor.vhd
 set_global_assignment -name VHDL_FILE ../../src/top.vhd
 
 # 3] set your pin constraints here
