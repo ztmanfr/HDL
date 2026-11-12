@@ -2,10 +2,8 @@
 -- lab 7 processor: reuses lab 6 alu / memory / synchronizers / double_dabble / seven_seg
 -- (all unchanged). Only the wiring differs from lab 6's calculator.
 --
--- execute edge (cycle E):
---   ALU reads A = mem_dout (memory at addr_ptr = latest result), B = instr(7:0)
---   at end of E: result_reg <= alu_result, addr_ptr <= next_addr, pc <= pc + 1
--- cycle E+1: write_en = 1, memory writes result_reg into the new addr_ptr slot
+-- PLAYBACK = true  : each press shows the next ROM value (instr(7:0)) as is
+-- PLAYBACK = false : each press runs the ALU (latest result op operand)
 -------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
@@ -25,6 +23,8 @@ entity processor is
 end processor;
 
 architecture struct of processor is
+
+  constant PLAYBACK : boolean := true;
 
   component blink_rom is
     port (
@@ -91,9 +91,13 @@ begin
     elsif rising_edge(clk) then
       write_en <= exec_edge;
       if exec_edge = '1' then
-        pc         <= pc + 1;
-        addr_ptr   <= next_addr;
-        result_reg <= alu_result;
+        pc       <= pc + 1;
+        addr_ptr <= next_addr;
+        if PLAYBACK then
+          result_reg <= instr(7 downto 0);   -- show the stored value as is
+        else
+          result_reg <= alu_result;          -- normal lab 7 behavior
+        end if;
       end if;
     end if;
   end process;
