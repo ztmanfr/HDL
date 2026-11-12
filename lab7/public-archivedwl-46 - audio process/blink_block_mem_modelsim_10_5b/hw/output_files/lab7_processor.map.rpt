@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab7_processor
-Thu Nov 12 13:19:52 2026
+Thu Nov 12 13:26:49 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -14,22 +14,21 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis DSP Block Usage Summary
- 10. Analysis & Synthesis IP Cores Summary
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|altsyncram_gt43:altsyncram1
- 15. Parameter Settings for User Entity Instance: processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component
- 16. Parameter Settings for User Entity Instance: processor:u_proc|memory:u_memory
- 17. Parameter Settings for Inferred Entity Instance: processor:u_proc|alu:u_alu|lpm_divide:Div0
- 18. altsyncram Parameter Settings by Entity Instance
- 19. Port Connectivity Checks: "processor:u_proc|double_dabble:u_dd"
- 20. In-System Memory Content Editor Settings
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+  9. Analysis & Synthesis IP Cores Summary
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|altsyncram_gt43:altsyncram1
+ 14. Parameter Settings for User Entity Instance: processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component
+ 15. Parameter Settings for User Entity Instance: processor:u_proc|memory:u_memory
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "processor:u_proc|double_dabble:u_dd"
+ 18. Port Connectivity Checks: "processor:u_proc|alu:u_alu"
+ 19. In-System Memory Content Editor Settings
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -55,17 +54,17 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 12 13:19:52 2026           ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 12 13:26:49 2026           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; lab7_processor                                  ;
 ; Top-level Entity Name           ; top                                             ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 175                                             ;
+; Total registers                 ; 142                                             ;
 ; Total pins                      ; 28                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 320                                             ;
-; Total DSP Blocks                ; 1                                               ;
+; Total DSP Blocks                ; 0                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
 ; Total HSSI TX PCSs              ; 0                                               ;
@@ -179,51 +178,45 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                                                    ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                                          ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
-; ../../src/rom/blink_rom.vhd                                        ; yes             ; User Wizard-Generated File                   ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd                                                         ;             ;
-; ../../src/lab6/components.vhd                                      ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/components.vhd                                                       ;             ;
-; ../../src/lab6/rising_edge_synchronizer.vhd                        ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/rising_edge_synchronizer.vhd                                         ;             ;
-; ../../src/lab6/memory.vhd                                          ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/memory.vhd                                                           ;             ;
-; ../../src/lab6/alu.vhd                                             ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/alu.vhd                                                              ;             ;
-; ../../src/lab6/double_dabble.vhd                                   ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/double_dabble.vhd                                                    ;             ;
-; ../../src/lab6/seven_seg.vhd                                       ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/seven_seg.vhd                                                        ;             ;
-; ../../src/processor.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/processor.vhd                                                             ;             ;
-; ../../src/top.vhd                                                  ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/top.vhd                                                                   ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                                                      ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                                               ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                                         ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                                                      ;             ;
-; aglobal181.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                                                                      ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                                       ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                                                                                                          ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                                                                                                          ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                                                                                                        ;             ;
-; db/altsyncram_4g44.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_4g44.tdf                                             ;             ;
-; db/altsyncram_gt43.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_gt43.tdf                                             ;             ;
-; ../../sim/script/blink.mif                                         ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/sim/script/blink.mif                                                          ;             ;
-; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                                                                                 ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                                                       ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                                                                   ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                                                      ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                                                         ; altera_sld  ;
-; db/ip/sldf48ec766/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                                                    ;             ;
-; lpm_divide.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                                                                      ;             ;
-; abs_divider.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/abs_divider.inc                                                                                                     ;             ;
-; sign_div_unsign.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                                                                 ;             ;
-; db/lpm_divide_9am.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/lpm_divide_9am.tdf                                              ;             ;
-; db/sign_div_unsign_fkh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/sign_div_unsign_fkh.tdf                                         ;             ;
-; db/alt_u_div_4te.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/alt_u_div_4te.tdf                                               ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                                                                    ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                                                                          ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; ../../src/rom/blink_rom.vhd                                        ; yes             ; User Wizard-Generated File                   ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd                                                         ;             ;
+; ../../src/lab6/components.vhd                                      ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/components.vhd                                                       ;             ;
+; ../../src/lab6/rising_edge_synchronizer.vhd                        ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/rising_edge_synchronizer.vhd                                         ;             ;
+; ../../src/lab6/memory.vhd                                          ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/memory.vhd                                                           ;             ;
+; ../../src/lab6/alu.vhd                                             ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/alu.vhd                                                              ;             ;
+; ../../src/lab6/double_dabble.vhd                                   ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/double_dabble.vhd                                                    ;             ;
+; ../../src/lab6/seven_seg.vhd                                       ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/seven_seg.vhd                                                        ;             ;
+; ../../src/processor.vhd                                            ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/processor.vhd                                                             ;             ;
+; ../../src/top.vhd                                                  ; yes             ; User VHDL File                               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/top.vhd                                                                   ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                                                                      ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                                                               ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                                                         ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                                                                      ;             ;
+; aglobal181.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                                                                                      ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                                                       ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                                                                                                                          ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                                                                                                                          ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                                                                                                                        ;             ;
+; db/altsyncram_4g44.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_4g44.tdf                                             ;             ;
+; db/altsyncram_gt43.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_gt43.tdf                                             ;             ;
+; ../../sim/script/blink.mif                                         ; yes             ; Auto-Found Memory Initialization File        ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/sim/script/blink.mif                                                          ;             ;
+; sld_mod_ram_rom.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                                                                                                 ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                                                                       ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                                                                                   ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                                                                      ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                                                                         ; altera_sld  ;
+; db/ip/sldf48ec766/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                                                                    ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +------------------------------------------------------------------------+
@@ -231,27 +224,27 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 180                      ;
+; Estimate of Logic utilization (ALMs needed) ; 112                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 295                      ;
-;     -- 7 input functions                    ; 2                        ;
-;     -- 6 input functions                    ; 45                       ;
-;     -- 5 input functions                    ; 88                       ;
-;     -- 4 input functions                    ; 58                       ;
-;     -- <=3 input functions                  ; 102                      ;
+; Combinational ALUT usage for logic          ; 175                      ;
+;     -- 7 input functions                    ; 1                        ;
+;     -- 6 input functions                    ; 32                       ;
+;     -- 5 input functions                    ; 46                       ;
+;     -- 4 input functions                    ; 35                       ;
+;     -- <=3 input functions                  ; 61                       ;
 ;                                             ;                          ;
-; Dedicated logic registers                   ; 175                      ;
+; Dedicated logic registers                   ; 142                      ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 28                       ;
 ; Total MLAB memory bits                      ; 0                        ;
 ; Total block memory bits                     ; 320                      ;
 ;                                             ;                          ;
-; Total DSP Blocks                            ; 1                        ;
+; Total DSP Blocks                            ; 0                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 157                      ;
-; Total fan-out                               ; 2001                     ;
-; Average fan-out                             ; 3.66                     ;
+; Total fan-out                               ; 1377                     ;
+; Average fan-out                             ; 3.51                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -260,13 +253,8 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |top                                                                                                                                    ; 295 (2)             ; 175 (2)                   ; 320               ; 1          ; 28   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
-;    |processor:u_proc|                                                                                                                   ; 194 (7)             ; 86 (16)                   ; 320               ; 1          ; 0    ; 0            ; |top|processor:u_proc                                                                                                                                                                                                                                                                                                                           ; processor                         ; work         ;
-;       |alu:u_alu|                                                                                                                       ; 100 (18)            ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|processor:u_proc|alu:u_alu                                                                                                                                                                                                                                                                                                                 ; alu                               ; work         ;
-;          |lpm_divide:Div0|                                                                                                              ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|processor:u_proc|alu:u_alu|lpm_divide:Div0                                                                                                                                                                                                                                                                                                 ; lpm_divide                        ; work         ;
-;             |lpm_divide_9am:auto_generated|                                                                                             ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|processor:u_proc|alu:u_alu|lpm_divide:Div0|lpm_divide_9am:auto_generated                                                                                                                                                                                                                                                                   ; lpm_divide_9am                    ; work         ;
-;                |sign_div_unsign_fkh:divider|                                                                                            ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|processor:u_proc|alu:u_alu|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider                                                                                                                                                                                                                                       ; sign_div_unsign_fkh               ; work         ;
-;                   |alt_u_div_4te:divider|                                                                                               ; 82 (82)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|processor:u_proc|alu:u_alu|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider                                                                                                                                                                                                                 ; alt_u_div_4te                     ; work         ;
+; |top                                                                                                                                    ; 175 (2)             ; 142 (2)                   ; 320               ; 0          ; 28   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
+;    |processor:u_proc|                                                                                                                   ; 74 (7)              ; 53 (15)                   ; 320               ; 0          ; 0    ; 0            ; |top|processor:u_proc                                                                                                                                                                                                                                                                                                                           ; processor                         ; work         ;
 ;       |blink_rom:u_rom|                                                                                                                 ; 37 (0)              ; 35 (0)                    ; 320               ; 0          ; 0    ; 0            ; |top|processor:u_proc|blink_rom:u_rom                                                                                                                                                                                                                                                                                                           ; blink_rom                         ; work         ;
 ;          |altsyncram:altsyncram_component|                                                                                              ; 37 (0)              ; 35 (0)                    ; 320               ; 0          ; 0    ; 0            ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                           ; altsyncram                        ; work         ;
 ;             |altsyncram_4g44:auto_generated|                                                                                            ; 37 (0)              ; 35 (0)                    ; 320               ; 0          ; 0    ; 0            ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated                                                                                                                                                                                                                                            ; altsyncram_4g44                   ; work         ;
@@ -274,7 +262,6 @@ refer to the applicable agreement for further details.
 ;                |sld_mod_ram_rom:mgl_prim2|                                                                                              ; 37 (21)             ; 35 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                  ; sld_mod_ram_rom                   ; work         ;
 ;                   |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                  ; 16 (16)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                               ; sld_rom_sr                        ; work         ;
 ;       |double_dabble:u_dd|                                                                                                              ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|processor:u_proc|double_dabble:u_dd                                                                                                                                                                                                                                                                                                        ; double_dabble                     ; work         ;
-;       |memory:u_memory|                                                                                                                 ; 20 (20)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|processor:u_proc|memory:u_memory                                                                                                                                                                                                                                                                                                           ; memory                            ; work         ;
 ;       |rising_edge_synchronizer:u_sync_execute|                                                                                         ; 2 (2)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |top|processor:u_proc|rising_edge_synchronizer:u_sync_execute                                                                                                                                                                                                                                                                                   ; rising_edge_synchronizer          ; work         ;
 ;       |seven_seg:u_seg_0|                                                                                                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|processor:u_proc|seven_seg:u_seg_0                                                                                                                                                                                                                                                                                                         ; seven_seg                         ; work         ;
 ;       |seven_seg:u_seg_1|                                                                                                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|processor:u_proc|seven_seg:u_seg_1                                                                                                                                                                                                                                                                                                         ; seven_seg                         ; work         ;
@@ -300,18 +287,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------------------------+------------+----------------+--------------+--------------+--------------+--------------+------+----------------------------+
 
 
-+-----------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary  ;
-+---------------------------------+-------------+
-; Statistic                       ; Number Used ;
-+---------------------------------+-------------+
-; Independent 9x9                 ; 1           ;
-; Total number of DSP blocks      ; 1           ;
-;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 1           ;
-+---------------------------------+-------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                                                                                                      ;
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
@@ -330,12 +305,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 175   ;
+; Total registers                              ; 142   ;
 ; Number of registers using Synchronous Clear  ; 7     ;
 ; Number of registers using Synchronous Load   ; 11    ;
-; Number of registers using Asynchronous Clear ; 71    ;
+; Number of registers using Asynchronous Clear ; 70    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 131   ;
+; Number of registers using Clock Enable       ; 99    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -345,7 +320,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; reset                                                                                                                                                                                                                                                                                                                           ; 19      ;
+; reset                                                                                                                                                                                                                                                                                                                           ; 18      ;
 ; rst_flop1                                                                                                                                                                                                                                                                                                                       ; 1       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 3       ;
@@ -358,12 +333,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                                                                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[6]                                                                                                                                                                                                            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]                                                                                                                                                                                                 ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                                                                                                                                                                            ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|processor:u_proc|result_reg[4]                                                                                                                                                                                                                                                                                                                           ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4]                                                                                                                                                             ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 52 LEs               ; 16 LEs                 ; Yes        ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]                                                                                                                                                                  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[2]                                                                                                                                                                                                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                                                                                                                                                                                 ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[3]                                                                                                                                                                                                            ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[2]                                                                                                                                                             ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 52 LEs               ; 16 LEs                 ; Yes        ; |top|processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]                                                                                                                                                                  ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]                             ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[0]                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[1]                    ;
@@ -455,29 +429,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: processor:u_proc|alu:u_alu|lpm_divide:Div0 ;
-+------------------------+----------------+---------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                              ;
-+------------------------+----------------+---------------------------------------------------+
-; LPM_WIDTHN             ; 8              ; Untyped                                           ;
-; LPM_WIDTHD             ; 8              ; Untyped                                           ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                           ;
-; LPM_PIPELINE           ; 0              ; Untyped                                           ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                           ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                           ;
-; CBXI_PARAMETER         ; lpm_divide_9am ; Untyped                                           ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                           ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                           ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                        ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                      ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                      ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                    ;
-+------------------------+----------------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +--------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                             ;
 +-------------------------------------------+------------------------------------------------------------------+
@@ -508,6 +459,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:u_proc|alu:u_alu"                                                           ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; result ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; In-System Memory Content Editor Settings                                                                                                                    ;
 +----------------+-------------+-------+-------+------------+-------------------------------------------------------------------------------------------------+
@@ -522,37 +482,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 88                          ;
-;     CLR               ; 17                          ;
-;     ENA               ; 41                          ;
+; arriav_ff             ; 55                          ;
+;     CLR               ; 16                          ;
+;     ENA               ; 9                           ;
 ;     ENA CLR           ; 20                          ;
 ;     ENA SLD           ; 10                          ;
-; arriav_lcell_comb     ; 199                         ;
-;     arith             ; 54                          ;
-;         0 data inputs ; 12                          ;
-;         2 data inputs ; 1                           ;
-;         4 data inputs ; 6                           ;
-;         5 data inputs ; 35                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 138                         ;
+; arriav_lcell_comb     ; 79                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 78                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 20                          ;
-;         4 data inputs ; 35                          ;
-;         5 data inputs ; 33                          ;
-;         6 data inputs ; 31                          ;
-;     shared            ; 5                           ;
-;         0 data inputs ; 2                           ;
-;         2 data inputs ; 1                           ;
-;         4 data inputs ; 2                           ;
-; arriav_mac            ; 1                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 20                          ;
+;         5 data inputs ; 26                          ;
+;         6 data inputs ; 18                          ;
 ; boundary_port         ; 55                          ;
 ; stratixv_ram_block    ; 10                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.70                       ;
-; Average LUT depth     ; 6.99                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.58                        ;
 +-----------------------+-----------------------------+
 
 
@@ -589,8 +539,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------------+
 ; Partition Name   ; Elapsed Time ;
 +------------------+--------------+
-; Top              ; 00:00:01     ;
 ; sld_hub:auto_hub ; 00:00:00     ;
+; Top              ; 00:00:00     ;
 +------------------+--------------+
 
 
@@ -600,50 +550,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Thu Nov 12 13:19:34 2026
+    Info: Processing started: Thu Nov 12 13:26:31 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab7_processor -c lab7_processor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd
-    Info (12022): Found design unit 1: blink_rom-SYN File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd Line: 54
-    Info (12023): Found entity 1: blink_rom File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd Line: 44
-Info (12021): Found 1 design units, including 0 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/components.vhd
-    Info (12022): Found design unit 1: components File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/components.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/synchronizer_8bit.vhd
-    Info (12022): Found design unit 1: synchronizer_8bit-beh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/synchronizer_8bit.vhd Line: 13
-    Info (12023): Found entity 1: synchronizer_8bit File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/synchronizer_8bit.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/rising_edge_synchronizer.vhd
-    Info (12022): Found design unit 1: rising_edge_synchronizer-beh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/rising_edge_synchronizer.vhd Line: 13
-    Info (12023): Found entity 1: rising_edge_synchronizer File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/rising_edge_synchronizer.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/memory.vhd
-    Info (12022): Found design unit 1: memory-beh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/memory.vhd Line: 19
-    Info (12023): Found entity 1: memory File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/memory.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/alu.vhd
-    Info (12022): Found design unit 1: alu-beh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/alu.vhd Line: 19
-    Info (12023): Found entity 1: alu File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/alu.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/double_dabble.vhd
-    Info (12022): Found design unit 1: double_dabble-beh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/double_dabble.vhd Line: 20
-    Info (12023): Found entity 1: double_dabble File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/double_dabble.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/seven_seg.vhd
-    Info (12022): Found design unit 1: seven_seg-beh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/seven_seg.vhd Line: 11
-    Info (12023): Found entity 1: seven_seg File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/seven_seg.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/calculator.vhd
-    Info (12022): Found design unit 1: calculator-struct File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/calculator.vhd Line: 20
-    Info (12023): Found entity 1: calculator File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/calculator.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/processor.vhd
-    Info (12022): Found design unit 1: processor-struct File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 27
-    Info (12023): Found entity 1: processor File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 15
-Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/top.vhd
-    Info (12022): Found design unit 1: top-struct File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/top.vhd Line: 19
-    Info (12023): Found entity 1: top File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/top.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd
+    Info (12022): Found design unit 1: blink_rom-SYN File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd Line: 54
+    Info (12023): Found entity 1: blink_rom File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd Line: 44
+Info (12021): Found 1 design units, including 0 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/components.vhd
+    Info (12022): Found design unit 1: components File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/components.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/synchronizer_8bit.vhd
+    Info (12022): Found design unit 1: synchronizer_8bit-beh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/synchronizer_8bit.vhd Line: 13
+    Info (12023): Found entity 1: synchronizer_8bit File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/synchronizer_8bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/rising_edge_synchronizer.vhd
+    Info (12022): Found design unit 1: rising_edge_synchronizer-beh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/rising_edge_synchronizer.vhd Line: 13
+    Info (12023): Found entity 1: rising_edge_synchronizer File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/rising_edge_synchronizer.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/memory.vhd
+    Info (12022): Found design unit 1: memory-beh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/memory.vhd Line: 19
+    Info (12023): Found entity 1: memory File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/memory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/alu.vhd
+    Info (12022): Found design unit 1: alu-beh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/alu.vhd Line: 19
+    Info (12023): Found entity 1: alu File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/alu.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/double_dabble.vhd
+    Info (12022): Found design unit 1: double_dabble-beh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/double_dabble.vhd Line: 20
+    Info (12023): Found entity 1: double_dabble File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/double_dabble.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/seven_seg.vhd
+    Info (12022): Found design unit 1: seven_seg-beh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/seven_seg.vhd Line: 11
+    Info (12023): Found entity 1: seven_seg File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/seven_seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/calculator.vhd
+    Info (12022): Found design unit 1: calculator-struct File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/calculator.vhd Line: 20
+    Info (12023): Found entity 1: calculator File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/lab6/calculator.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/processor.vhd
+    Info (12022): Found design unit 1: processor-struct File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 25
+    Info (12023): Found entity 1: processor File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /users/ztm1359/documents/hdl/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/top.vhd
+    Info (12022): Found design unit 1: top-struct File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/top.vhd Line: 19
+    Info (12023): Found entity 1: top File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/top.vhd Line: 7
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "processor" for hierarchy "processor:u_proc" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/top.vhd Line: 53
-Warning (10036): Verilog HDL or VHDL warning at processor.vhd(50): object "dd_thousands" assigned a value but never read File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 50
-Info (12128): Elaborating entity "rising_edge_synchronizer" for hierarchy "processor:u_proc|rising_edge_synchronizer:u_sync_execute" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 54
-Info (12128): Elaborating entity "blink_rom" for hierarchy "processor:u_proc|blink_rom:u_rom" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 57
-Info (12128): Elaborating entity "altsyncram" for hierarchy "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd Line: 61
-Info (12130): Elaborated megafunction instantiation "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd Line: 61
-Info (12133): Instantiated megafunction "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd Line: 61
+Info (12128): Elaborating entity "processor" for hierarchy "processor:u_proc" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/top.vhd Line: 53
+Warning (10036): Verilog HDL or VHDL warning at processor.vhd(50): object "dd_thousands" assigned a value but never read File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 50
+Warning (10037): Verilog HDL or VHDL warning at processor.vhd(96): conditional expression evaluates to a constant File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 96
+Info (12128): Elaborating entity "rising_edge_synchronizer" for hierarchy "processor:u_proc|rising_edge_synchronizer:u_sync_execute" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 54
+Info (12128): Elaborating entity "blink_rom" for hierarchy "processor:u_proc|blink_rom:u_rom" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 57
+Info (12128): Elaborating entity "altsyncram" for hierarchy "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd Line: 61
+Info (12133): Instantiated megafunction "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/rom/blink_rom.vhd Line: 61
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -695,14 +646,14 @@ Info (12133): Instantiated megafunction "processor:u_proc|blink_rom:u_rom|altsyn
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=BLNK"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4g44.tdf
-    Info (12023): Found entity 1: altsyncram_4g44 File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_4g44.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_4g44 File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_4g44.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_4g44" for hierarchy "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gt43.tdf
-    Info (12023): Found entity 1: altsyncram_gt43 File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_gt43.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_gt43" for hierarchy "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|altsyncram_gt43:altsyncram1" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_4g44.tdf Line: 34
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_4g44.tdf Line: 35
-Info (12130): Elaborated megafunction instantiation "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_4g44.tdf Line: 35
-Info (12133): Instantiated megafunction "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_4g44.tdf Line: 35
+    Info (12023): Found entity 1: altsyncram_gt43 File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_gt43.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_gt43" for hierarchy "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|altsyncram_gt43:altsyncram1" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_4g44.tdf Line: 34
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_4g44.tdf Line: 35
+Info (12130): Elaborated megafunction instantiation "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_4g44.tdf Line: 35
+Info (12133): Instantiated megafunction "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/altsyncram_4g44.tdf Line: 35
     Info (12134): Parameter "CVALUE" = "0000000000"
     Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
     Info (12134): Parameter "IS_READABLE" = "1"
@@ -714,12 +665,12 @@ Info (12133): Instantiated megafunction "processor:u_proc|blink_rom:u_rom|altsyn
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "processor:u_proc|blink_rom:u_rom|altsyncram:altsyncram_component|altsyncram_4g44:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "memory" for hierarchy "processor:u_proc|memory:u_memory" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 65
-Info (12128): Elaborating entity "alu" for hierarchy "processor:u_proc|alu:u_alu" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 75
-Info (12128): Elaborating entity "double_dabble" for hierarchy "processor:u_proc|double_dabble:u_dd" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 106
-Info (12128): Elaborating entity "seven_seg" for hierarchy "processor:u_proc|seven_seg:u_seg_0" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 115
+Info (12128): Elaborating entity "memory" for hierarchy "processor:u_proc|memory:u_memory" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 65
+Info (12128): Elaborating entity "alu" for hierarchy "processor:u_proc|alu:u_alu" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 75
+Info (12128): Elaborating entity "double_dabble" for hierarchy "processor:u_proc|double_dabble:u_dd" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 110
+Info (12128): Elaborating entity "seven_seg" for hierarchy "processor:u_proc|seven_seg:u_seg_0" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/processor.vhd Line: 119
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2026.11.12.13:19:45 Progress: Loading sldf48ec766/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2026.11.12.13:26:42 Progress: Loading sldf48ec766/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -730,49 +681,32 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldf48ec766/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "processor:u_proc|memory:u_memory|mem" is uninferred due to inappropriate RAM size File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/memory.vhd Line: 21
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "processor:u_proc|alu:u_alu|Div0" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/alu.vhd Line: 27
-Info (12130): Elaborated megafunction instantiation "processor:u_proc|alu:u_alu|lpm_divide:Div0" File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/alu.vhd Line: 27
-Info (12133): Instantiated megafunction "processor:u_proc|alu:u_alu|lpm_divide:Div0" with the following parameter: File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/lab6/alu.vhd Line: 27
-    Info (12134): Parameter "LPM_WIDTHN" = "8"
-    Info (12134): Parameter "LPM_WIDTHD" = "8"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_9am.tdf
-    Info (12023): Found entity 1: lpm_divide_9am File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/lpm_divide_9am.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_fkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_fkh File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/sign_div_unsign_fkh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_4te.tdf
-    Info (12023): Found entity 1: alt_u_div_4te File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/hw/project/db/alt_u_div_4te.tdf Line: 22
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/hw/project/db/ip/sldf48ec766/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "bcd_2[1]" is stuck at GND File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/top.vhd Line: 15
+    Warning (13410): Pin "bcd_2[1]" is stuck at GND File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46 - audio process/blink_block_mem_modelsim_10_5b/src/top.vhd Line: 15
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 419 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 273 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 26 output pins
-    Info (21061): Implemented 375 logic cells
+    Info (21061): Implemented 230 logic cells
     Info (21064): Implemented 10 RAM segments
-    Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4973 megabytes
-    Info: Processing ended: Thu Nov 12 13:19:52 2026
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4936 megabytes
+    Info: Processing ended: Thu Nov 12 13:26:49 2026
     Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:36
 
