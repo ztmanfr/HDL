@@ -15,8 +15,7 @@ set_global_assignment -name TOP_LEVEL_ENTITY top
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY ../output_files
 
 # 2] include your relative path files here
-set_global_assignment -name QIP_FILE  ../../src/rom/blink_rom.qip
-# set_global_assignment -name VHDL_FILE ../../src/rom/blink_rom.vhd
+set_global_assignment -name VHDL_FILE ../../src/rom/blink_rom.vhd
 set_global_assignment -name VHDL_FILE ../../src/lab6/components.vhd
 set_global_assignment -name VHDL_FILE ../../src/lab6/synchronizer_8bit.vhd
 set_global_assignment -name VHDL_FILE ../../src/lab6/rising_edge_synchronizer.vhd
