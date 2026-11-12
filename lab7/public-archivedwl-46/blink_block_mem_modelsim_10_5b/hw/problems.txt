@@ -1,0 +1,20 @@
+Error (12006): Node instance "u_proc" instantiates undefined entity "processor". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/ztm1359/Documents/HDL/lab7/public-archivedwl-46/blink_block_mem_modelsim_10_5b/src/top.vhd Line: 53
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 4852 megabytes
+    Error: Processing ended: Thu Nov 12 12:58:14 2026
+    Error: Elapsed time: 00:00:10
+    Error: Total CPU time (on all processors): 00:00:17
+Error (293001): Quartus Prime Full Compilation was unsuccessful. 3 errors, 1 warning
+------------------------------------------------
+ERROR: Error(s) found while running an executable. See report file(s) for error message(s). Message log indicates which executable was run last.
+
+    while executing
+"execute_flow -compile"
+    (file "compile.tcl" line 69)
+------------------------------------------------
+Error (23031): Evaluation of Tcl script compile.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 8 errors, 2 warnings
+    Error: Peak virtual memory: 4674 megabytes
+    Error: Processing ended: Thu Nov 12 12:58:15 2026
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:01
