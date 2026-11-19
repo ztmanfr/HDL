@@ -1,0 +1,95 @@
+# //  ModelSim SE-64 2019.2 Apr 17 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do sim.do
+# Model Technology ModelSim SE-64 vmap 2019.2 Lib Mapping Utility 2019.04 Apr 17 2019
+# vmap work work 
+# Modifying C:/Software/ModelSim/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 14:30:53 on Nov 19,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rom_data/rom_data.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom_data
+# -- Compiling architecture rtl of rom_data
+# End time: 14:30:53 on Nov 19,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 14:30:53 on Nov 19,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rom_instructions/rom_instructions.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom_instructions
+# -- Compiling architecture rtl of rom_instructions
+# End time: 14:30:53 on Nov 19,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 14:30:53 on Nov 19,2026
+# vcom -reportprogress 300 -93 -work work ../../src/rising_edge_synchronizer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity rising_edge_synchronizer
+# -- Compiling architecture beh of rising_edge_synchronizer
+# End time: 14:30:53 on Nov 19,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 14:30:53 on Nov 19,2026
+# vcom -reportprogress 300 -93 -work work ../../src/generic_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity generic_counter
+# -- Compiling architecture beh of generic_counter
+# End time: 14:30:53 on Nov 19,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 14:30:53 on Nov 19,2026
+# vcom -reportprogress 300 -93 -work work ../../src/dj_roomba_3000.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dj_roomba_3000
+# -- Compiling architecture beh of dj_roomba_3000
+# End time: 14:30:53 on Nov 19,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 2019.2 Compiler 2019.04 Apr 17 2019
+# Start time: 14:30:53 on Nov 19,2026
+# vcom -reportprogress 300 -93 -work work ../src/dj_roomba_3000_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dj_roomba_3000_tb
+# -- Compiling architecture arch of dj_roomba_3000_tb
+# ** Warning: ../src/dj_roomba_3000_tb.vhd(36): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 14:30:53 on Nov 19,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.dj_roomba_3000_tb 
+# Start time: 14:30:54 on Nov 19,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "dj_roomba_3000(beh)".
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.dj_roomba_3000_tb(arch)#1
+# Loading work.generic_counter(beh)#1
+# Loading work.dj_roomba_3000(beh)#1
+# Loading work.rom_instructions(rtl)#1
+# Loading work.rom_data(rtl)#1
